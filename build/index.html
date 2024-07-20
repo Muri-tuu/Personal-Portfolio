@@ -13,18 +13,21 @@
 </head>
 
 <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
+
+  <!-- Header Section -->
   <header class="sticky top-0 z-10 bg-teal-700 text-white">
     <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
       <h1 class="text-3xl font-medium">
         <a href="#hero">✨Profile</a>
       </h1>
       <div>
+        <!-- Hamburger Button for Mobile Menu -->
         <button id="hamburger-button" class="relative h-8 w-8 cursor-pointer text-3xl md:hidden">
-          <!-- &#9776; -->
           <div
             class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']">
           </div>
         </button>
+        <!-- Main Navigation -->
         <nav class="hidden space-x-8 text-xl md:block" aria-label="main">
           <a href="#rockets" class="hover:opacity-90">Projects</a>
           <a href="#testimonials" class="hover:opacity-90">About</a>
@@ -32,11 +35,10 @@
         </nav>
       </div>
     </section>
+
+    <!-- Mobile Menu -->
     <section id="mobile-menu"
       class="top-68 justify-content-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-5xl">
-      <!-- <button class="text-8xl self-end px-6">
-                &times;
-            </button> -->
       <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
         <a href="#hero" class="w-full py-6 text-center hover:opacity-90">Home</a>
         <a href="#rockets" class="w-full py-6 text-center hover:opacity-90">Projects</a>
@@ -46,18 +48,22 @@
       </nav>
     </section>
   </header>
+
+  <!-- Main Content -->
   <main class="mx-auto max-w-4xl">
+
+    <!-- Hero Section -->
     <section id="hero"
       class="widescreen:section-min-height tallscreen:section-min-height mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row">
       <article class="sm:w-1/2">
         <h2 class="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
-          
           <span class="text-indigo-950 dark:text-indigo-300">Hello There👋 </span>
           <span class="text-pink-900 dark:text-indigo-300"> <br>I am <strong>Kennedy Muritu.</strong>... </span>
-
         </h2>
         <p class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
-           I am an individual with a keen interest in leveraging technology and i have embarked on an exciting journey in the realm of software development. I am dedicated in mastering coding languages in the quest to create impactful digital solutions...
+          I am an individual with a keen interest in leveraging technology and I have embarked on an exciting journey in
+          the realm of software development. I am dedicated in mastering coding languages in the quest to create
+          impactful digital solutions...
         </p>
         <p class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
           <strong>Muri_tuu</strong>
@@ -68,29 +74,36 @@
 
     <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
+    <!-- Projects Section -->
     <section id="rockets" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
       <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
         Projects.
       </h2>
       <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row">
-        <li class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+        <!-- Project 1 -->
+        <li
+          class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
           <img src="./img/taco.png" alt="Taco Shop" class="mb-6 w-1/2" />
           <h3 class="text-center text-3xl text-slate-900 dark:text-white">
             The Little Taco Shop
           </h3>
           <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
-            This was my first project, I combined html and css to create an online tacos shop where buyers can shop tacos easily.
+            The first project! I combined Html and CSS to create an online tacos shop where buyers can shop tacos
+            easily.
           </p><br>
-          <a href=https://github.com/Muri-tuu/css_project.git>Check the repository <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-          </svg>
+          <a href="https://github.com/Muri-tuu/css_project.git">Check the repository <svg
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
           </a>
           <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
             The Little Taco Shop
           </p>
         </li>
-    
-        <li class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+        <!-- Project 2 -->
+        <li
+          class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
           <img src="./img/rocketlaunch.png" alt="Acme Web" class="mb-6 w-1/2" />
           <h3 class="text-center text-3xl text-slate-900 dark:text-white">
             Acme Rockets Web
@@ -98,137 +111,30 @@
           <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
             I incoporated simple concepts in tailwindcss with html to create the website.
           </p><br>
-          <a href=https://github.com/Muri-tuu/tailwindcss_lesson2.git>Check the repository<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="1 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-          </svg>
-           </a>
+          <a href="https://github.com/Muri-tuu/tailwindcss_lesson2.git">Check the repository<svg
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="1 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </a>
           <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
             Acme Rockets Web
           </p>
         </li>
       </ul>
     </section>
-    
-    
 
     <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
+    <!-- About Me Section -->
     <section id="testimonials"
       class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
       <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-        About Me 
+        About Me
       </h2>
+      <!-- Education -->
       <figure class="my-12">
         <h2 class="mb-6 text-left text-1xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-           Education
+          Education
         </h2>
-        <h3 class="text-left text-3xl text-slate-900 dark:text-white">
-          DirectED Development
-        </h3>
-          <p
-            class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl">
-            I enrolled in a 12-week vigorous coding bootcamp with <strong>DirectED Development</strong> where I covered full-stack web development focusing on the Javascript MERN stack. 
-          </p><br><figure>Check out their Website below. <br>
-             <br><a href="https://directed.dev/">DirectED.dev    ↗️</a><br>
-          </figure>
-            <figure class="my-12">
-            <h2 class="mb-6 text-left text-1xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-               Experience
-            </h2>
-            <h3 class="text-left text-3xl text-slate-900 dark:text-white">
-              DirectED Development Internship
-            </h3>
-              <p
-                class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl">
-                Upon successful completion of the bootcamp I interned with DirectED's tech partner Tally where I has the priviledge of specializing in advanced training. At tally I had the opportunity to work as a remote software engineer.
-              </p>
-              <figure class="my-12">
-                <h2 class="mb-6 text-left text-1xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-                   Hobbies
-                </h2>
-                <h3 class="text-left text-3xl text-slate-900 dark:text-white">
-                  Playing  the Guitar 
-                </h3>
-                  <p
-                    class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl">
-                    My undying love for music led me to the world of instrumentals. I practice playing the guitar.
-                  </p><br>
-                  <h3 class="text-left text-3xl text-slate-900 dark:text-white">
-                    Reading Fictional Novels
-                  </h3>
-                    <p
-                      class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl">
-                     In a world full of all sorts of evil, I chose to dive into a realm of fantacies...that found in novels.
-                    </p> <figure class="my-12">
-                      <h2 class="mb-6 text-left text-1xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-                         Skills
-                      </h2>
-                      <h3 class="text-left text-3xl text-slate-900 dark:text-white">
-                        Analytic Skills 
-                      </h3>
-                        <p
-                          class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl">
-                          Owing to the vigorous bootcamp I garnered analysis as well as problem solving skills.
-                        </p><br>
-                        <h3 class="text-left text-3xl text-slate-900 dark:text-white">
-                          Leadership Skills 
-                        </h3>
-                          <p
-                            class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl">
-                        Interning at Tally led me into moderating several projects in their web department.
-                          </p>
-              
-            
-            
-
-
-        
-      
-      
-      </figure>
-    </section>
-
-    <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
-
-    <section id="contact" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-16 p-6">
-      <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-        Contact Me
-      </h2>
-      <form action="" class="items-left mx-auto flex max-w-4xl flex-col gap-4 text-2xl sm:text-3xl">
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required minlength="3" maxlength="60" placeholder="Your Subject"
-          class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl" />
-        <label for="message">Message:</label>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required
-          class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"></textarea>
-        <button
-          class="w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none">
-          Submit
-        </button>
-      </form>
-    </section>
-  </main>
-
-  <footer id="footer" class="bg-teal-700 text-xl text-white">
-    <section class="mx-auto flex max-w-4xl flex-col p-4 sm:flex-row sm:justify-between">
-      <address>
-        <h2><strong>Reach out to me via;</strong></h2>
-             
-        
-        <a href="mailto:kenhopkins001@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> kenhopkins001@gmail.com</a><br /><i class="fa fa-phone-square" aria-hidden="true"></i>
-        Phone: <a href="tel:+15555555555"> (+254) 0115594826</a><br><i class="fa fa-linkedin-square" aria-hidden="true"></i>
-        Linkedin: <a href="https://www.linkedin.com/in/kennedy-muritu-1b8246305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Kennedy Muritu</a><br><i class="fa fa-instagram" aria-hidden="true"></i>
-        Instagram: <a href="https://www.instagram.com/muri_tuu?igsh=MXd4aDlkN3V3bXRxNA==">Kennedy Muritu</a><br>
-          
-      </address>
-      <nav class="hidden flex-col gap-2 md:flex" aria-label="footer">
-        <a href="#rockets" class="hover:opacity-90">Projects</a>
-        <a href="#testimonials" class="hover:opacity-90">About</a>
-        <a href="#contact" class="hover:opacity-90">Contact Me</a>
-      </nav>
-       
-    </section>
-  </footer>
-</body>
-
-</html>
+        <h3
