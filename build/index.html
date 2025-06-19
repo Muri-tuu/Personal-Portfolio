@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="sm:scroll-smooth">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muri-tuu</title>
+  <title>Kennedy Muritu - Full Stack Developer & Tech Leader</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/main.js" defer></script>
   <link rel="icon" href="./img/favicon.png">
@@ -15,126 +15,689 @@
 <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
 
   <!-- Header Section -->
-  <header class="sticky top-0 z-10 bg-teal-700 text-white">
-    <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
-      <h1 class="text-3xl font-medium">
-        <a href="#hero">✨Profile</a>
-      </h1>
-      <div>
-        <!-- Hamburger Button for Mobile Menu -->
-        <button id="hamburger-button" class="relative h-8 w-8 cursor-pointer text-3xl md:hidden">
-          <div
-            class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']">
-          </div>
-        </button>
-        <!-- Main Navigation -->
-        <nav class="hidden space-x-8 text-xl md:block" aria-label="main">
-          <a href="#rockets" class="hover:opacity-90">Projects</a>
-          <a href="#testimonials" class="hover:opacity-90">About</a>
-          <a href="#contact" class="hover:opacity-90">Contact Me</a>
-        </nav>
+  <header class="fixed top-0 z-50 w-full bg-white/90 backdrop-blur-md shadow-sm dark:bg-black/90">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div class="flex items-center space-x-2">
+        <div class="h-10 w-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+          <span class="text-white font-bold text-lg">KM</span>
+        </div>
+        <span class="text-xl font-bold text-gray-900 dark:text-white">Kennedy Muritu</span>
       </div>
-    </section>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors">Home</a>
+        <a href="#about" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors">About</a>
+        <a href="#skills" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors">Skills</a>
+        <a href="#projects" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors">Projects</a>
+        <a href="#experience" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors">Experience</a>
+        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2">
+        <div class="w-6 h-6 flex flex-col justify-center items-center">
+          <span class="block w-full h-0.5 bg-gray-900 dark:bg-white transition-all duration-300"></span>
+          <span class="block w-full h-0.5 bg-gray-900 dark:bg-white mt-1 transition-all duration-300"></span>
+          <span class="block w-full h-0.5 bg-gray-900 dark:bg-white mt-1 transition-all duration-300"></span>
+        </div>
+      </button>
+    </nav>
 
     <!-- Mobile Menu -->
-    <section id="mobile-menu"
-      class="top-68 justify-content-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-5xl">
-      <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
-        <a href="#hero" class="w-full py-6 text-center hover:opacity-90">Home</a>
-        <a href="#rockets" class="w-full py-6 text-center hover:opacity-90">Projects</a>
-        <a href="#testimonials" class="w-full py-6 text-center hover:opacity-90">About</a>
-        <a href="#contact" class="w-full py-6 text-center hover:opacity-90">Contact Me</a>
-        <a href="#footer" class="w-full py-6 text-center hover:opacity-90">Legal</a>
-      </nav>
-    </section>
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-black border-t dark:border-gray-800">
+      <div class="px-6 py-4 space-y-4">
+        <a href="#home" class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+        <a href="#about" class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">About</a>
+        <a href="#skills" class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
+        <a href="#projects" class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+        <a href="#experience" class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Experience</a>
+        <a href="#contact" class="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center">Contact</a>
+      </div>
+    </div>
   </header>
 
   <!-- Main Content -->
-  <main class="mx-auto max-w-4xl">
+  <main class="pt-20">
 
     <!-- Hero Section -->
-    <section id="hero"
-      class="widescreen:section-min-height tallscreen:section-min-height mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row">
-      <article class="sm:w-1/2">
-        <h2 class="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
-          <span class="text-indigo-950 dark:text-indigo-300">Hello There👋 </span>
-          <span class="text-pink-900 dark:text-indigo-300"> <br>I am <strong>Kennedy Muritu.</strong>... </span>
-        </h2>
-        <p class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
-          I am an individual with a keen interest in leveraging technology and I have embarked on an exciting journey in
-          the realm of software development. I am dedicated in mastering coding languages in the quest to create
-          impactful digital solutions...
-        </p>
-        <p class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
-          <strong>Muri_tuu</strong>
-        </p>
-      </article>
-      <img class="w-1/2" src="./img/anonymous.webp" alt="Kennedy Muritu" />
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 animate-fade-in-up">
+          <div class="space-y-2">
+            <p class="text-blue-600 dark:text-blue-400 font-medium">Hello, I'm</p>
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white">
+              Kennedy <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Muritu</span>
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300">Full Stack Developer & Tech Leader</p>
+          </div>
+          
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            Passionate about leveraging technology to create impactful digital solutions. 
+            I combine technical expertise with leadership skills and creative expression through music.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
+              View My Work <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="border border-blue-600 text-blue-600 dark:text-blue-400 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
+              Get In Touch
+            </a>
+          </div>
+          
+          <div class="flex gap-4 pt-4">
+            <a href="#" class="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 text-xl transition-colors">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 text-xl transition-colors">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 text-xl transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="relative animate-fade-in-right">
+          <div class="relative w-80 h-80 mx-auto">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-pulse"></div>
+            <img src="./img/1692060024849.jpg" alt="Kennedy Muritu" 
+                 class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl">
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Available for work</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            A multi-faceted professional combining technical expertise, leadership skills, and creative passion
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Tech Passion -->
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6">
+              <i class="fas fa-code text-2xl text-blue-600 dark:text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Technology Enthusiast</h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Passionate about leveraging cutting-edge technologies to solve real-world problems. 
+              Always learning and adapting to the latest trends in software development.
+            </p>
+          </div>
+          
+          <!-- Music Passion -->
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mb-6">
+              <i class="fas fa-music text-2xl text-purple-600 dark:text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Musical Artist</h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Creative expression through piano and guitar. Music fuels my creativity and provides 
+              a unique perspective that I bring to my technical work.
+            </p>
+          </div>
+          
+          <!-- Leadership -->
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-6">
+              <i class="fas fa-users text-2xl text-green-600 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Tech Leader</h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Experienced in leading technical teams and projects. Committed to mentoring others 
+              and building inclusive, innovative tech communities.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Personal Image -->
+        <div class="mt-16 text-center">
+          <div class="relative inline-block">
+            <img src="./img/IMG_5375.jpg" alt="Kennedy playing piano" 
+                 class="w-64 h-64 object-cover rounded-xl shadow-lg mx-auto">
+            <div class="absolute -bottom-4 -right-4 bg-purple-600 text-white p-3 rounded-lg">
+              <i class="fas fa-piano text-xl"></i>
+            </div>
+          </div>
+          <p class="mt-6 text-gray-600 dark:text-gray-300 italic">
+            "Combining the precision of code with the creativity of music"
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Skills & Expertise</h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300">
+            A comprehensive toolkit for modern software development
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Technical Skills -->
+          <div class="space-y-8">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Technical Skills</h3>
+            
+            <div class="space-y-6">
+              <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-900 dark:text-white">JavaScript/TypeScript</span>
+                  <span class="text-blue-600 dark:text-blue-400">90%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-900 dark:text-white">React/Next.js</span>
+                  <span class="text-blue-600 dark:text-blue-400">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-900 dark:text-white">Node.js/Express</span>
+                  <span class="text-blue-600 dark:text-blue-400">80%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-900 dark:text-white">Python/Django</span>
+                  <span class="text-blue-600 dark:text-blue-400">75%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-900 dark:text-white">Database Design</span>
+                  <span class="text-blue-600 dark:text-blue-400">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tools & Technologies -->
+          <div class="space-y-8">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Tools & Technologies</h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition-shadow">
+                <i class="fab fa-git-alt text-3xl text-orange-500 mb-2"></i>
+                <p class="font-medium text-gray-900 dark:text-white">Git</p>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition-shadow">
+                <i class="fab fa-docker text-3xl text-blue-500 mb-2"></i>
+                <p class="font-medium text-gray-900 dark:text-white">Docker</p>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition-shadow">
+                <i class="fab fa-aws text-3xl text-yellow-500 mb-2"></i>
+                <p class="font-medium text-gray-900 dark:text-white">AWS</p>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition-shadow">
+                <i class="fas fa-database text-3xl text-green-500 mb-2"></i>
+                <p class="font-medium text-gray-900 dark:text-white">MongoDB</p>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition-shadow">
+                <i class="fab fa-figma text-3xl text-purple-500 mb-2"></i>
+                <p class="font-medium text-gray-900 dark:text-white">Figma</p>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition-shadow">
+                <i class="fas fa-mobile-alt text-3xl text-indigo-500 mb-2"></i>
+                <p class="font-medium text-gray-900 dark:text-white">React Native</p>
+              </div>
+            </div>
+            
+            <!-- Soft Skills -->
+            <div class="mt-8">
+              <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Leadership & Soft Skills</h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">Team Leadership</span>
+                <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Project Management</span>
+                <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">Mentoring</span>
+                <span class="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">Public Speaking</span>
+                <span class="bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 px-3 py-1 rounded-full text-sm">Creative Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Projects Section -->
-    <section id="rockets" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
-      <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-        Projects.
-      </h2>
-      <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row">
-        <!-- Project 1 -->
-        <li
-          class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
-          <img src="./img/taco.png" alt="Taco Shop" class="mb-6 w-1/2" />
-          <h3 class="text-center text-3xl text-slate-900 dark:text-white">
-            The Little Taco Shop
-          </h3>
-          <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
-            The first project! I combined Html and CSS to create an online tacos shop where buyers can shop tacos
-            easily.
-          </p><br>
-          <a href="https://github.com/Muri-tuu/css_project.git">Check the repository <svg
-              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-            </svg>
-          </a>
-          <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
-            The Little Taco Shop
+    <section id="projects" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300">
+            A showcase of my technical expertise and creative solutions
           </p>
-        </li>
-        <!-- Project 2 -->
-        <li
-          class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
-          <img src="./img/rocketlaunch.png" alt="Acme Web" class="mb-6 w-1/2" />
-          <h3 class="text-center text-3xl text-slate-900 dark:text-white">
-            Acme Rockets Web
-          </h3>
-          <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
-            I incoporated simple concepts in tailwindcss with html to create the website.
-          </p><br>
-          <a href="https://github.com/Muri-tuu/tailwindcss_lesson2.git">Check the repository<svg
-              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="1 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-            </svg>
+        </div>
+        
+        <!-- Project Filter -->
+        <div class="flex justify-center mb-12">
+          <div class="bg-gray-100 dark:bg-gray-800 p-1 rounded-lg">
+            <button class="filter-btn active px-4 py-2 rounded-md text-sm font-medium transition-colors" data-filter="all">
+              All Projects
+            </button>
+            <button class="filter-btn px-4 py-2 rounded-md text-sm font-medium transition-colors" data-filter="web">
+              Web Apps
+            </button>
+            <button class="filter-btn px-4 py-2 rounded-md text-sm font-medium transition-colors" data-filter="mobile">
+              Mobile
+            </button>
+            <button class="filter-btn px-4 py-2 rounded-md text-sm font-medium transition-colors" data-filter="fullstack">
+              Full Stack
+            </button>
+          </div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-category="web fullstack">
+            <div class="relative">
+              <img src="./img/taco.png" alt="The Little Taco Shop" class="w-full h-48 object-cover">
+              <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded text-xs font-medium">
+                Web App
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">The Little Taco Shop</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                A modern e-commerce platform built with HTML5 and CSS3, featuring responsive design and smooth user experience.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-2 py-1 rounded text-xs">HTML5</span>
+                <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-xs">CSS3</span>
+                <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded text-xs">Responsive</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="https://github.com/Muri-tuu/css_project.git" class="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="#" class="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 2 -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-category="web">
+            <div class="relative">
+              <img src="./img/rocketlaunch.png" alt="Acme Rockets" class="w-full h-48 object-cover">
+              <div class="absolute top-4 right-4 bg-purple-600 text-white px-2 py-1 rounded text-xs font-medium">
+                Landing Page
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Acme Rockets Web</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Modern landing page built with Tailwind CSS, featuring smooth animations and mobile-first design approach.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 px-2 py-1 rounded text-xs">Tailwind CSS</span>
+                <span class="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-2 py-1 rounded text-xs">HTML5</span>
+                <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-2 py-1 rounded text-xs">JavaScript</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="https://github.com/Muri-tuu/tailwindcss_lesson2.git" class="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="#" class="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 3 - Tech Conference -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-category="fullstack">
+            <div class="relative">
+              <img src="./img/21031052b5784c94bb1bee7ddf8fe052.jpg" alt="Tech Conference Platform" class="w-full h-48 object-cover">
+              <div class="absolute top-4 right-4 bg-green-600 text-white px-2 py-1 rounded text-xs font-medium">
+                Full Stack
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Tech Conference Platform</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Comprehensive platform for tech conferences with speaker management, attendee registration, and real-time networking features.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-xs">React</span>
+                <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded text-xs">Node.js</span>
+                <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded text-xs">MongoDB</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="#" class="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="#" class="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="#" class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            View All Projects <i class="fas fa-arrow-right"></i>
           </a>
-          <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
-            Acme Rockets Web
-          </p>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
 
-    <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6 bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Experience & Journey</h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300">
+            My professional journey in technology and leadership
+          </p>
+        </div>
+        
+        <div class="relative">
+          <!-- Timeline Line -->
+          <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-600"></div>
+          
+          <div class="space-y-12">
+            <!-- Experience Item 1 -->
+            <div class="relative flex items-start gap-8">
+              <div class="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center relative z-10">
+                <i class="fas fa-microphone text-white text-xl"></i>
+              </div>
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex-1">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">Tech Conference Speaker</h3>
+                  <span class="text-blue-600 dark:text-blue-400 font-medium">2023 - Present</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                  Regular speaker at technology conferences, sharing insights on software development, 
+                  leadership, and the intersection of technology and creativity.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">Public Speaking</span>
+                  <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Thought Leadership</span>
+                  <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">Community Building</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Experience Item 2 -->
+            <div class="relative flex items-start gap-8">
+              <div class="flex-shrink-0 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center relative z-10">
+                <i class="fas fa-code text-white text-xl"></i>
+              </div>
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex-1">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">Full Stack Developer</h3>
+                  <span class="text-green-600 dark:text-green-400 font-medium">2022 - Present</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                  Developing end-to-end web applications using modern technologies. 
+                  Focus on creating scalable, maintainable solutions with excellent user experience.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">React</span>
+                  <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Node.js</span>
+                  <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">Database Design</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Experience Item 3 -->
+            <div class="relative flex items-start gap-8">
+              <div class="flex-shrink-0 w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center relative z-10">
+                <i class="fas fa-music text-white text-xl"></i>
+              </div>
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex-1">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">Music Producer & Performer</h3>
+                  <span class="text-purple-600 dark:text-purple-400 font-medium">2020 - Present</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                  Creating and performing music on piano and guitar. This creative outlet enhances 
+                  my problem-solving abilities and brings unique perspectives to technical challenges.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">Piano</span>
+                  <span class="bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 px-3 py-1 rounded-full text-sm">Guitar</span>
+                  <span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 px-3 py-1 rounded-full text-sm">Music Production</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Experience Item 4 -->
+            <div class="relative flex items-start gap-8">
+              <div class="flex-shrink-0 w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center relative z-10">
+                <i class="fas fa-graduation-cap text-white text-xl"></i>
+              </div>
+              <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex-1">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">Software Development Journey</h3>
+                  <span class="text-orange-600 dark:text-orange-400 font-medium">2021 - 2022</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                  Embarked on an intensive journey to master software development, focusing on 
+                  modern web technologies and best practices in software engineering.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">Self-Learning</span>
+                  <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-sm">Project-Based Learning</span>
+                  <span class="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">Continuous Growth</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- About Me Section -->
-    <section id="testimonials"
-      class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
-      <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-        About Me
-      </h2>
-      <!-- Education -->
-      <figure class="my-12">
-        <h2 class="mb-6 text-left text-1xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-          Education
-        </h2>
-        <h3
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Let's Work Together</h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300">
+            Ready to bring your ideas to life? Let's discuss your next project
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Get In Touch</h3>
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                I'm always interested in new opportunities, collaborations, and interesting projects. 
+                Whether you have a question or just want to say hi, I'll try my best to get back to you!
+              </p>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-envelope text-blue-600 dark:text-blue-400"></i>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-900 dark:text-white">Email</p>
+                  <p class="text-gray-600 dark:text-gray-300">kennedy.muritu@example.com</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-phone text-green-600 dark:text-green-400"></i>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-900 dark:text-white">Phone</p>
+                  <p class="text-gray-600 dark:text-gray-300">+254 XXX XXX XXX</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-map-marker-alt text-purple-600 dark:text-purple-400"></i>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-900 dark:text-white">Location</p>
+                  <p class="text-gray-600 dark:text-gray-300">Nairobi, Kenya</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex gap-4 pt-4">
+              <a href="#" class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white transition-colors">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white transition-colors">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white transition-colors">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white transition-colors">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+            <form class="space-y-6" id="contact-form">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                <input type="text" id="name" name="name" required
+                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white">
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                <input type="email" id="email" name="email" required
+                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white">
+              </div>
+              
+              <div>
+                <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                <input type="text" id="subject" name="subject" required
+                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white">
+              </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                <textarea id="message" name="message" rows="5" required
+                          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"></textarea>
+              </div>
+              
+              <button type="submit" 
+                      class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                Send Message <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+              <span class="text-white font-bold text-lg">KM</span>
+            </div>
+            <span class="text-xl font-bold">Kennedy Muritu</span>
+          </div>
+          <p class="text-gray-400 leading-relaxed mb-6">
+            Full Stack Developer passionate about creating impactful digital solutions 
+            through the perfect blend of technology, leadership, and creativity.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><span class="text-gray-400">Web Development</span></li>
+            <li><span class="text-gray-400">Mobile Apps</span></li>
+            <li><span class="text-gray-400">Tech Consulting</span></li>
+            <li><span class="text-gray-400">Team Leadership</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">
+          © 2024 Kennedy Muritu. All rights reserved. Built with ❤️ and lots of ☕
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
